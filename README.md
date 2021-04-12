@@ -6,7 +6,7 @@
 ### LSTM 模型配適
 1. 讀取training data，將特徵進行shift，每一個row會有過去10天的開盤價、收盤價、高峰、低峰，以及要預測的下一天的開盤價
 2. 建構LSTM模型，模型架構如下
-![](./src/model.png)
+![](./src/model.jpg)
 3. 使用前處理完的資料訓練LSTM模型，epoch為1000，batch_size為32，使用的loss function是MSE，並使用Adam優化
 4. 讀取testing data，將特徵進行shift，每一個row會有過去10天的開盤價、收盤價、高峰、低峰
 5. 使用先前訓練完的模型對testing data做預測，將預測結果儲存下來供後續使用
